@@ -19,7 +19,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var tableView: UITableView!
     
-    var items: [String] = []
+    @IBOutlet var allCaughtUpLabel: UILabel!
+    
+    var items: [String] = [] {
+        didSet {
+            if items.count > 0 {
+                tableView.hidden = false
+                allCaughtUpLabel.hidden = true
+            } else {
+                tableView.hidden = true
+                allCaughtUpLabel.hidden = false
+            }
+        }
+    }
+        
     var doneItems: [String] = []
     
     // Set self as the delegate of the AddItemViewController that is about to come on-screen.

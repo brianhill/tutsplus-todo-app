@@ -18,12 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Caught Up!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xF-ya-Zzb">
+                                <rect key="frame" x="235" y="288" width="130" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-FA-BUh">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlainTableViewCell" id="02T-sr-9J0">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="02T-sr-9J0" id="SNO-FN-z4L">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
@@ -39,8 +45,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0xF-ya-Zzb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FNW-3Y-JJJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hHZ-FA-BUh" secondAttribute="trailing" id="ILu-DN-65d"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hHZ-FA-BUh" secondAttribute="bottom" id="eoH-Eq-agy"/>
+                            <constraint firstItem="0xF-ya-Zzb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lBl-Bt-E1W"/>
                             <constraint firstItem="hHZ-FA-BUh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="woF-UT-nlq"/>
                             <constraint firstItem="hHZ-FA-BUh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xca-tH-pRb"/>
                         </constraints>
@@ -53,6 +61,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="allCaughtUpLabel" destination="0xF-ya-Zzb" id="gAK-ba-ydd"/>
                         <outlet property="tableView" destination="hHZ-FA-BUh" id="oZU-Rf-QcY"/>
                     </connections>
                 </viewController>

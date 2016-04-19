@@ -34,6 +34,7 @@ class AddItemViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "Add Item"
     }
 
     override func didReceiveMemoryWarning() {
