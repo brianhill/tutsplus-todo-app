@@ -10,12 +10,17 @@
 
 import UIKit
 
+let ITEMS_KEY = "items"
+let DONE_ITEMS_KEY = "doneItems"
+
+let userDefaults = NSUserDefaults.standardUserDefaults()
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddItemViewControllerDelegate {
     
     @IBOutlet var tableView: UITableView!
     
-    var items: [String] = ["Buy Milk", "Finish Tutorial", "Play Minecraft"]
-    var doneItems: [String] = ["Buy Milk"]
+    var items: [String] = []
+    var doneItems: [String] = []
     
     // Set self as the delegate of the AddItemViewController that is about to come on-screen.
 
@@ -94,11 +99,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "To Do"
+        self.loadItems()
+        self.loadCheckedItems()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Persistence using NSUserDefaults
+    
+    func loadItems() {
+        if let items = userDefaults.objectForKey(ITEMS_KEY) as? [String] {
+            self.items = items
+        } else {
+            // Give the user something to start with if they have nothing in user defaults:
+            self.items = ["Buy Milk", "Play Minecraft"]
+        }
+    }
+    
+    func loadCheckedItems() {
+        if let doneItems = userDefaults.objectForKey(DONE_ITEMS_KEY) as? [String] {
+            self.doneItems = doneItems
+        }
+    }
+    
+    func saveItems() {
+        userDefaults.setObject(items, forKey: ITEMS_KEY)
+    }
+    
+    func saveDoneItems() {
+        userDefaults.setObject(doneItems, forKey: DONE_ITEMS_KEY)
     }
 
 }
