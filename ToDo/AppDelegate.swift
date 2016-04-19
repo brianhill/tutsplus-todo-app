@@ -5,6 +5,7 @@
 //  Created by Brian Hill on 4/19/16 by following these tutorials:
 //  http://code.tutsplus.com/tutorials/swift-from-scratch-inheritance-and-protocols--cms-23334
 //  http://code.tutsplus.com/tutorials/swift-from-scratch-delegation-and-properties--cms-23445
+//  http://code.tutsplus.com/tutorials/swift-from-scratch-access-control-and-property-observers--cms-23487
 //
 
 import UIKit
