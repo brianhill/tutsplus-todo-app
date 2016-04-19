@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32342B91CC66A43003DAC03 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32342B81CC66A43003DAC03 /* AddItemViewController.swift */; };
 		D3A734921CC6585C008C5B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A734911CC6585C008C5B3F /* AppDelegate.swift */; };
 		D3A734941CC6585C008C5B3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A734931CC6585C008C5B3F /* ViewController.swift */; };
 		D3A734971CC6585C008C5B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A734951CC6585C008C5B3F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D32342B81CC66A43003DAC03 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		D3A7348E1CC6585C008C5B3F /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A734911CC6585C008C5B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A734931CC6585C008C5B3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				D3A734911CC6585C008C5B3F /* AppDelegate.swift */,
 				D3A734931CC6585C008C5B3F /* ViewController.swift */,
+				D32342B81CC66A43003DAC03 /* AddItemViewController.swift */,
 				D3A734951CC6585C008C5B3F /* Main.storyboard */,
 				D3A734981CC6585C008C5B3F /* Assets.xcassets */,
 				D3A7349A1CC6585C008C5B3F /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				D3A734941CC6585C008C5B3F /* ViewController.swift in Sources */,
 				D3A734921CC6585C008C5B3F /* AppDelegate.swift in Sources */,
+				D32342B91CC66A43003DAC03 /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
